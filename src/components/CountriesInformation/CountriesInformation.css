@@ -1,0 +1,44 @@
+.countries-info {
+  padding: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid black;
+}
+.app-title {
+  text-align: center;
+  font-size: 24px;
+  color: #17a2b8;
+  font-weight: 700;
+}
+.countries-info select {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  font-weight: 700;
+  overflow: hidden;
+}
+.flag-container {
+  height: 250px;
+  width: 500px;
+}
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 20px;
+  }
+  .countries-info select {
+    width: 200px;
+    overflow: hidden;
+  }
+  .flag-container {
+    height: 100px;
+    width: 200px;
+  }
+}

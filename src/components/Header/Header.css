@@ -1,0 +1,22 @@
+nav {
+  padding: 10px;
+}
+nav .nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+nav .mobile-version {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav .nav-links {
+    font-size: 10px;
+  }
+  nav .mobile-version {
+    display: block;
+  }
+  nav .web-version {
+    display: none;
+  }
+}
