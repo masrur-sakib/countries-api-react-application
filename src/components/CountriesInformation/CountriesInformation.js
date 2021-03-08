@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import "./CountriesInformation.css";
-import { connect } from "react-redux";
-import {
-  fetchCountries,
-  selectedCountry,
-} from "../../redux/actions/countriesActions";
 
-const CountriesInformation = ({ countriesInfo, fetchCountries }) => {
+const CountriesInformation = ({ fetchCountries, showCountryInformation }) => {
   useEffect(() => {
     fetchCountries();
   }, []);
+
+  // Function to capture selected country name
+  let selectedCountry = (e) => {
+    showCountryInformation(e.target.value);
+  };
 
   return (
     <div className="container">
@@ -60,20 +60,4 @@ const CountriesInformation = ({ countriesInfo, fetchCountries }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    countriesInfo: state.countries,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchCountries: () => dispatch(fetchCountries()),
-    selectedCountry: () => dispatch(selectedCountry()),
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CountriesInformation);
+export default CountriesInformation;

@@ -3,7 +3,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  border: 1px solid black;
+  border: 1px solid #8080802a;
 }
 .app-title {
   text-align: center;
